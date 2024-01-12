@@ -25,6 +25,17 @@ class LinkedList{
 
 	}
 
+	public void reverseRec(Node node){
+		if(node==null)
+		{
+			return;
+		}
+		else{
+			System.out.println(node.data +"Reve");
+			reverseRec(node.next);
+		}
+	}
+
 	public void reverseList(){
 		Node current=head;
 		Node prev=null,next=null;
@@ -36,7 +47,7 @@ class LinkedList{
 			}
 
 			head=prev;
-			travers(head);
+			reverseRec(head);
 
 	}
 
